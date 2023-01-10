@@ -1,0 +1,447 @@
+:root {
+    --background: #313131;
+    --red: #A10000;
+    --white: #fff;
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+body {
+    background-color: #313131;
+    font-family: "Raleway", sans-serif;
+    min-height: 100vh;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+/* Start animation */
+
+.start {
+    background-color: #A10000;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 4;
+}
+.start-left {
+    left: 0;
+    right: 50%;
+    animation-name: startLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+.start-right {
+    left: 50%;
+    right: 0;
+    animation-name: startRight;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+@keyframes startLeft {
+    0% {right: 50%; left: 0;}
+    100% {right: 100%; left: 0; display: none;}
+}
+
+@keyframes startRight {
+    0% {left: 50%; right: 0;}
+    100% {left: 100%; right: 0; display: none;}
+}
+
+/* Up button */
+
+.go-up {
+    opacity: 0;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 4;
+}
+
+/* Landing page */
+.landing-page {
+    text-align: center;
+    height: 100vh;
+    position: relative;
+}
+.landing-nav {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    right: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    transition: 0.2s;
+}
+.nav-left {
+    text-align: left;
+    margin-top: 9px;
+}
+.landing-nav-menu {
+    display: none;
+    transition: 0.15s;
+}
+.nav-link {
+    margin-right: 10px;
+    font-size: large;
+    font-weight: bold;
+    text-decoration: none;
+    text-decoration: underline transparent 2px;
+    transition: 0.25s;
+}
+.nav-link:hover {
+    text-decoration: underline 2px var(--red);
+}
+.resume-btn {
+    background-color: var(--white);
+    color: var(--red);
+    text-decoration: none;
+    padding: 10px 30px;
+    font-weight: 800;
+    border-radius: 10px;
+    font-size: large;
+    float: right;
+    max-height: 40px;
+    transition: 0.25s;
+}
+.resume-btn:hover {
+    background-color: var(--red);
+    color: var(--white);
+}
+.landing-describe {
+    margin-top: 45vh;
+    position: relative;
+    transition: 0.3s;
+    display: inline-block;
+    cursor: default;
+}
+.landing-name {
+    color: var(--red);
+    letter-spacing: 1px;
+    transition: 0.8s;
+}
+.landing-describe:hover {
+    transform: rotate(2deg) scale(1.1);
+}
+.landing-describe:hover > .landing-name {
+    transform: rotateX(360deg);
+}
+.landing-job {
+    font-weight: 500;
+}
+.landing-line{
+    width: 100px;
+    position: absolute;
+    top: 20px;
+}
+
+.landing-end-line {
+    position: absolute;
+    top: 99.5%;
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    border: 0;
+}
+
+/* Landing page - resposive */
+
+@media (max-width: 470px) {
+    .nav-link {
+        display: block;
+        margin-top: 35px;
+    }
+    .nav-left {
+        display: none;
+    }
+    
+    .landing-nav-menu {
+        display: inline-block;
+    }
+    .landing-nav-menu:hover {
+        color: rgba(255, 255, 255, 0.593);
+    }
+    .nav-link:hover {
+         text-decoration: underline 2px var(--background);
+    }
+}
+
+.landing-nav-menu.active {
+    position: absolute;
+    color: var(--background);
+    z-index: 3;
+}
+.landing-nav-menu.active:hover {
+    color: #31313170;
+}
+.nav-left.active {
+    display: inline-block;
+    background-color: #A10000;
+    margin: -20px 0 0 -30px;
+    width: 50%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 35px;
+    border-bottom-right-radius: 10px;
+    z-index: 2;
+}
+
+/* projects section */
+.projects {
+    width: 100%;
+    text-align: center;
+    min-height: 98vh;
+    padding-bottom: 50px;
+    position: relative;
+}
+
+.projects-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0px 0 0px;
+}
+
+.projects-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 35px;
+    border: 0.11rem solid black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: 0.25s;
+}
+.projects-btn-next, .projects-btn-previos {
+    background-color: var(--red);
+}
+.projects-btn-all {
+    color: var(--red);
+    background-color: var(--white);
+}
+.projects-btn-all:hover {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.projects-btn-next:hover, .projects-btn-previos:hover {
+    background-color: var(--white);
+    color: var(--red);
+}
+
+.projects-img {
+    width: 85%;
+    margin: auto;
+    border-radius: 3px;
+    border: 1px solid var(--red);
+}
+
+/* About section */
+
+.about {
+    min-height: 98vh;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding-bottom: 50px;
+}
+.about h1 {
+    margin-top: 70px;
+}
+.about-top {
+    color: var(--red);
+    margin: 40px 0 10px 0;
+    font-weight: 700;
+    font-style:italic;
+}
+.about-experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about-languages {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 70%;
+}
+.about-tools {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+}
+.about-certificates {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+.about-certificates a {
+    width: 370px;
+    border-radius: 10px;
+}
+.about-certificate-img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+/* Contact section */
+
+.contact {
+    min-height: 98vh;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.contact-form {
+    margin-top: 30px;
+}
+
+.contact-form-names  .contact-inputbox {
+    width: 150px;
+}
+
+.contact-form-names {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+
+.contact-form-details .contact-inputbox {
+    width: 330px;
+}
+.contact-form-details {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-inputbox {
+    position: relative;
+}
+.contact-inputbox input,textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--red);
+    background-color: var(--background);
+    outline: none;
+    border-radius: 5px;
+    color: var(--white);
+    font-size: medium;
+}
+.contact-inputbox span {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: medium;
+    color: rgba(255, 255, 255, 0.543);
+    transition: 0.3s;
+}
+.contact-inputbox input:valid ~ span,
+.contact-inputbox input:focus ~ span {
+    color: var(--white);
+    transform: translateY(-7px) translateX(10px);
+    font-size: small;
+    padding: 0 10px;
+    background-color: var(--background);
+    border-left: 3px double var(--red);
+    border-right: 3px double var(--red);
+}
+.contact-inputbox textarea:valid ~ span,
+.contact-inputbox textarea:focus ~ span {
+    color: var(--white);
+    transform: translateY(-7px) translateX(10px);
+    font-size: small;
+    padding: 0 10px;
+    background-color: var(--background);
+    border-left: 3px double var(--red);
+    border-right: 3px double var(--red);
+}
+
+.contact-form-message {
+    resize: vertical;
+}
+
+
+.contact-form-submit {
+    background-color: var(--red);
+    color: var(--white);
+    font-size: large;
+    border: 1px solid black;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin-top: 20px;
+    transition: 0.15s;
+}
+.contact-form-submit:hover {
+    background-color: var(--white);
+    color: var(--red);
+}
+.contact-social-icons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.contact-social-icon {
+    color: white;
+    transition: 0.20s;
+}
+.contact-social-icon:hover {
+    color: var(--red);
+}
+
+/* Footer */ 
+.footer {
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    padding: 18px 0;
+}
+
+
+/* thank you page */
+
+.thanks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+}
+.thanks h1 {
+    color: var(--red);
+}
+.thanks h3 a {
+    color: var(--red);
+}

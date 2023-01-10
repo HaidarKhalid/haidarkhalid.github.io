@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--Components-->
+
+    <!--main-->
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Haidar Khalid</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!--Start animation-->
+    <div class="start-left start"></div>
+    <div class="start-right start"></div>
+    <!--Up button-->
+    <iconify-icon onclick="goUp()" class="go-up" icon="material-symbols:arrow-circle-up-rounded" style="color: #a10000;" width="35" height="35"></iconify-icon>
+    <!--Landing page-->
+    <div class="landing-page" id="landing-page">
+        <nav class="landing-nav">
+
+            <iconify-icon class="landing-nav-menu"
+            icon="mingcute:menu-fill"width="30" height="30"></iconify-icon>
+
+            <div class="nav-left">
+                <a class="nav-link" href="#projects">PROJECTS</a>
+                <a class="nav-link" href="#about">ABOUT</a>
+                <a class="nav-link" href="#contact">CONTACT</a>
+            </div>
+            <a class="resume-btn" target="_blank" href="https://resume.io/r/X7fO5zYiG">RESUME</a>
+        </nav>
+        <div class="landing-describe">
+            <h1 class="landing-name">HaidarKhalid</h1>
+            <h2 class="landing-job">Web developer</h2>
+            <!--line svg-->
+            <svg class="landing-line" id="ef4KZghELqc1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><path d="M85.359589,205.020548c-24.743657-13.588908-172.495098,6.483473,117.294521-98" transform="matrix(1.642581-.028671-.009866 0.565209-39.205294 65.145256)" fill="none" stroke="#a10000" stroke-width="9.3"/></svg>
+        </div>
+        <hr class="landing-end-line">
+    </div>
+    <br>
+    <!--Projects section-->
+    <div class="projects" id="projects">
+        <header>
+            <h2 class="projects-header">PROJECTS</h2>
+            <div class="projects-buttons">
+                <button onclick="previos()" class="projects-btn projects-btn-previos">Previos project</button>
+                <button onclick="next()" class="projects-btn projects-btn-next">Next project</button>
+            </div>
+        </header>
+        <br>
+        <h2 class="projects-name">DuckDuckGo recreate</h2>
+        <br>
+        <a class="projects-href" target="_blank" href="https://haidarkhalid.github.io/DuckDuckGo-recreate/">        
+            <img class="projects-img" src="images/projects/DuckDuckGo-recreate.png">
+        </a>
+        <hr class="landing-end-line">
+    </div>
+    <!--About section-->
+    <div class="about" id="about">
+        <h1>ABOUT</h1>
+        <br>
+        <h2 class="about-top">Who i am?</h2>
+        <h3>Hi, im Haidar Khalid. I live in Iraq/Baghdad <br> Birthday: 2008 Feb the 10th
+        </h3>
+        <h2 class="about-top">Experience</h2>
+        <div class="about-experience">
+            <div class="about-languages">
+                <iconify-icon icon="vscode-icons:file-type-html" width="100"></iconify-icon>
+
+                <iconify-icon icon="vscode-icons:file-type-css" width="100"></iconify-icon>
+
+                <iconify-icon icon="logos:javascript" width="100"></iconify-icon>
+            </div>
+            <div class="about-tools">
+
+                <iconify-icon icon="ion:logo-github" style="color: #a10000;" width="110"></iconify-icon>
+
+                <iconify-icon icon="mdi:git" style="color: #a10000;" width="110"></iconify-icon>
+
+                <iconify-icon icon="mdi:vs-code" style="color: #a10000;" width="110"></iconify-icon>
+            </div>
+        </div>
+        <h2 class="about-top">Certificates</h2>
+        <div class="about-certificates">
+            <a target="_blank" href="https://www.freecodecamp.org/certification/HaidarKhalid/javascript-algorithms-and-data-structures
+            ">
+            <img class="about-certificate-img" src="images/certificate/fcc-js-sertificate.png" alt="JavaScript algorithms and Data Structures certificate from freeCodeCamp.org"></a>
+
+            <a target="_blank" href="https://www.sololearn.com/certificates/CT-1GAQIZF3
+            ">
+            <img class="about-certificate-img" src="images/certificate/html-sololearn-cetificate.png" alt="HTML certificate from solo learn"></a>
+        </div>
+        <h2 class="about-top">Languages</h2>
+        <h3 class="about-real-language">Arabic - Native speaker</h3>
+        <br>
+        <h3 class="about-real-language">English - Very good</h3>
+        <hr class="landing-end-line">
+    </div>
+
+    <!--Contact section-->
+    <div class="contact" id="contact">
+        <br>
+        <h1>Contact</h1>
+        <form class="contact-form" action="https://formsubmit.co/HaidarContactMe@gmail.com" method="POST">
+
+            <input type="hidden" name="_next" value="https://haidarkhalid.github.io/portfolio/thanks.html">
+
+            <div class="contact-form-names">
+                <div class="contact-inputbox">
+                    <input name="FirstName" type="text" required="required">
+                    <span>First name</span>
+                </div>
+                <div class="contact-inputbox">
+                    <input name="LastName"  type="text" required="required">
+                    <span>Last name</span>
+                </div>
+            </div>
+            <div class="contact-form-details">
+                <div class="contact-inputbox">
+                    <input name="Email" type="email" required="required">
+                    <span>Email</span>
+                </div>
+                <div class="contact-inputbox">
+                    <textarea name="Message" class="contact-form-message" cols="30" rows="10"  required="required"></textarea>
+                    <span>Message</span>
+                </div>
+            </div>
+            <button class="contact-form-submit" type="submit">Send</button>
+       </form>
+
+       <div class="contact-social-icons">
+            <a target="_blank" href="https://www.instagram.com/y_g_v/"><iconify-icon class="contact-social-icon" icon="uil:instagram-alt" width="30"></iconify-icon></a>
+
+            <a target="_blank" href="https://www.facebook.com/HaidarKhalidKhalifa"><iconify-icon class="contact-social-icon" icon="mdi:facebook" width="30"></iconify-icon></a>
+
+            <a target="_blank" href="https://github.com/HaidarKhalid"><iconify-icon class="contact-social-icon" icon="ion:logo-github" width="30"></iconify-icon></a>
+
+            <a target="_blank" href="https://www.linkedin.com/in/haidar-khalid-603140249/"><iconify-icon class="contact-social-icon" icon="ion:logo-linkedin" width="30"></iconify-icon></a>
+       </div>
+    </div>
+    <!--Footer-->
+    <div class="footer">
+        <h3>All created from scratch <br> Haidar Khalid</h3>
+    </div>
+    <!--components-->
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+</body>
+</html>
