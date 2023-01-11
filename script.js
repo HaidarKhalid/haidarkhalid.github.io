@@ -1,14 +1,20 @@
-
-
 let menu = document.querySelector(".landing-nav-menu")
 let navLeft = document.querySelector(".nav-left")
+
 let goUpBtn = document.querySelector(".go-up")
-let nameTop = document.querySelector(".name-top")
+
 let nameMiddle = document.querySelector(".landing-describe")
 let nav = document.querySelector(".landing-nav")
+
 let projectImg = document.querySelector(".projects-img")
 let projectName = document.querySelector(".projects-name")
 let projectHref = document.querySelector(".projects-href")
+
+let aboutEl = document.querySelector(".about")
+let experienceEl = document.querySelector(".about-experience")
+let languagesEl = document.querySelector(".about-languages")
+let toolsEl = document.querySelector(".about-tools")
+
 // Humberger menu 
 
 menu.addEventListener("click",()=> {
