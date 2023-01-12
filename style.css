@@ -68,6 +68,15 @@ body {
 }
 
 /* Landing page */
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    filter: blur(3.5px);
+}
+
 .landing-page {
     text-align: center;
     height: 100vh;
@@ -98,6 +107,7 @@ body {
     text-decoration: none;
     text-decoration: underline transparent 2px;
     transition: 0.25s;
+
 }
 .nav-link:hover {
     text-decoration: underline 2px var(--red);
@@ -119,7 +129,7 @@ body {
     color: var(--white);
 }
 .landing-describe {
-    margin-top: 45vh;
+    top: 45vh;
     position: relative;
     transition: 0.3s;
     display: inline-block;
@@ -360,15 +370,13 @@ body {
 /* About section */
 
 .about {
-    min-height: 98vh;
+    min-height: 100vh;
     width: 100%;
     text-align: center;
     position: relative;
     padding-bottom: 50px;
 }
-.about h1 {
-    margin-top: 70px;
-}
+
 .about-top {
     color: var(--red);
     margin: 40px 0 10px 0;

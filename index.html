@@ -14,39 +14,45 @@
     <script defer src="script.js" ></script>
 </head>
 <body>
-
+    
+    
+    
+    <div id="particles-js"></div>  
+    
     <!--Start animation-->
     <div class="start-left start"></div>
     <div class="start-right start"></div>
     <!--Up button-->
     <iconify-icon onclick="goUp()" class="go-up" icon="material-symbols:arrow-circle-up-rounded" style="color: #a10000;" width="35" height="35"></iconify-icon>
     <!--Landing page-->
+    
     <div class="landing-page" id="landing-page">
-        <nav class="landing-nav">
+            
+            <nav class="landing-nav">
 
-            <iconify-icon class="landing-nav-menu"
-            icon="mingcute:menu-fill"width="30" height="30"></iconify-icon>
+                <iconify-icon class="landing-nav-menu"
+                icon="mingcute:menu-fill"width="30" height="30"></iconify-icon>
 
-            <div class="nav-left">
-                <a class="nav-link" href="#projects">PROJECTS</a>
-                <a class="nav-link" href="#about">ABOUT</a>
-                <a class="nav-link" href="#contact">CONTACT</a>
+                <div class="nav-left">
+                    <a class="nav-link" href="#projects">PROJECTS</a>
+                    <a class="nav-link" href="#about">ABOUT</a>
+                    <a class="nav-link" href="#contact">CONTACT</a>
+                </div>
+                <a class="resume-btn" target="_blank" href="https://resume.io/r/X7fO5zYiG">RESUME</a>
+            </nav>
+            <div class="landing-describe">
+                <h1 class="landing-name">HaidarKhalid</h1>
+                <h2 class="landing-job">Web developer</h2>
+                <!--line svg-->
+                <svg class="landing-line" id="ef4KZghELqc1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><path d="M85.359589,205.020548c-24.743657-13.588908-172.495098,6.483473,117.294521-98" transform="matrix(1.642581-.028671-.009866 0.565209-39.205294 65.145256)" fill="none" stroke="#a10000" stroke-width="9.3"/></svg>
             </div>
-            <a class="resume-btn" target="_blank" href="https://resume.io/r/X7fO5zYiG">RESUME</a>
-        </nav>
-        <div class="landing-describe">
-            <h1 class="landing-name">HaidarKhalid</h1>
-            <h2 class="landing-job">Web developer</h2>
-            <!--line svg-->
-            <svg class="landing-line" id="ef4KZghELqc1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><path d="M85.359589,205.020548c-24.743657-13.588908-172.495098,6.483473,117.294521-98" transform="matrix(1.642581-.028671-.009866 0.565209-39.205294 65.145256)" fill="none" stroke="#a10000" stroke-width="9.3"/></svg>
+            <hr class="landing-end-line">
         </div>
-        <hr class="landing-end-line">
-    </div>
-    <br>
+        
     <!--Projects section-->
     <div class="projects" id="projects">
         <header>
-            <h2 class="projects-header">PROJECTS</h2>
+            <h2 style="margin-top: 20px;" class="projects-header">PROJECTS</h2>
             <div class="projects-buttons">
                 <button onclick="previos()" class="projects-btn projects-btn-previos">Previos project</button>
                 <button onclick="next()" class="projects-btn projects-btn-next">Next project</button>
@@ -65,13 +71,15 @@
                 <div class="projects-hidden-div"><p>Click to view</p></div>
             </a>
         </div>
-        <br><br><br>
+        <br>
+        <small style="color: grey; display: block;">Images may take a few secounds to load</small>
+        <br><br><br><br>
         <a class="projects-ap" href="allprojects.html">All projects</a>
         <hr class="landing-end-line">
     </div>
     <!--About section-->
     <div class="about" id="about">
-        <h1>ABOUT</h1>
+        <h1 style="margin-top: 70px;">ABOUT</h1>
         <br>
         <h2 class="about-top">Who i am?</h2>
         <h3>Hi, im Haidar Khalid. I live in Iraq/Baghdad <br> Birthday: 2008 Feb the 10th
@@ -158,5 +166,7 @@
     </div>
     <!--components-->
     <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <script src="particles/particles.js"></script>
+    <script src="particles/app.js"></script>
 </body>
 </html>
