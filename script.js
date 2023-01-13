@@ -15,6 +15,9 @@ let experienceEl = document.querySelector(".about-experience")
 let languagesEl = document.querySelector(".about-languages")
 let toolsEl = document.querySelector(".about-tools")
 
+let scrollDown = document.querySelector(".landing-scroll-down-div")
+
+
 // Humberger menu 
 
 menu.addEventListener("click",()=> {
@@ -29,9 +32,11 @@ function goUp() {
 window.onscroll = function (e) {
     if (scrollY == 0) {
         goUpBtn.style.opacity = "0"
+        scrollDown.style.opacity = "1"
 
     } else {
         goUpBtn.style.opacity = "1"
+        scrollDown.style.opacity = "0"
     }
 }
 

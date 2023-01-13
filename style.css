@@ -18,6 +18,30 @@ body {
     scroll-behavior: smooth;
 }
 
+/* Scroll bar style */
+
+    /* width */
+::-webkit-scrollbar {
+    width: 12px;
+}
+  
+    /* Track */
+::-webkit-scrollbar-track {
+    border-left: 1px solid var(--red);
+    border-radius: 5px;
+}
+   
+    /* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--red); 
+    border-radius: 5px;
+}
+  
+    /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #880000; 
+}
+
 /* Start animation */
 
 .start {
@@ -134,17 +158,23 @@ body {
     transition: 0.3s;
     display: inline-block;
     cursor: default;
+    animation-name: mainName;
+    animation-duration: 6s;
+    animation-iteration-count: infinite; 
+}
+@keyframes mainName {
+    0% {transform: translateY(0);}
+    40% {transform: translateY(2px) rotateZ(1deg);}
+    80% {transform: translateY(-2px) rotateZ(-1deg);}
+    100% {transform: translateY(0px) rotateZ(0deg);}
 }
 .landing-name {
     color: var(--red);
     letter-spacing: 1px;
     transition: 0.8s;
 }
-.landing-describe:hover {
-    transform: rotate(2deg) scale(1.1);
-}
 .landing-describe:hover > .landing-name {
-    transform: rotateX(360deg);
+    transform: scale(1.08);
 }
 .landing-job {
     font-weight: 500;
@@ -162,6 +192,26 @@ body {
     width: 100%;
     background-color: black;
     border: 0;
+}
+
+.landing-scroll-down-div {
+    position: absolute;
+    top: 93vh;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    transition: 0.5s;
+}
+.landing-scroll-down {
+    animation-name: scrollDown;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scrollDown {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-10px);}
+    100% {transform: translateY(0);}
 }
 
 /* Landing page - resposive */
