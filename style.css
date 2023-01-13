@@ -11,7 +11,7 @@
     color: white;
 }
 body {
-    background-color: #313131;
+    background-color: var(--background);
     font-family: "Raleway", sans-serif;
     min-height: 100vh;
     width: 100%;
@@ -196,7 +196,7 @@ body {
 
 .landing-scroll-down-div {
     position: absolute;
-    top: 93vh;
+    top: 89vh;
     left: 0;
     right: 0;
     opacity: 1;
