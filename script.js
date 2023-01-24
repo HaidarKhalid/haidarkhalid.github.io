@@ -17,6 +17,8 @@ let toolsEl = document.querySelector(".about-tools")
 
 let scrollDown = document.querySelector(".landing-scroll-down-div")
 
+let catEggEl = document.querySelector(".cat-egg")
+
 
 // Humberger menu 
 
@@ -83,4 +85,10 @@ function previos() {
         projectImg.src = myProjects[projectNames[x]]["src"]
         projectHref.href = myProjects[projectNames[x]]["link"]
     }
+}
+
+/* cat egg */
+function catEgg() {
+    catEggEl.style.opacity = "1"
+    setTimeout(()=>{catEggEl.style.opacity = "0"},1500)
 }

@@ -1,7 +1,7 @@
 :root {
-    --background: #313131;
-    --red: #A10000;
-    --white: #fff;
+    --background: #282828;
+    --red: #a10000;
+    --white: rgb(255, 255, 255);
 }
 
 *, *::after, *::before {
@@ -98,7 +98,7 @@ body {
     left: 0;
     bottom: 0;
     right: 0;
-    filter: blur(3.5px);
+    filter: opacity(0.4) blur(2px);
 }
 
 .landing-page {
@@ -131,10 +131,20 @@ body {
     text-decoration: none;
     text-decoration: underline transparent 2px;
     transition: 0.25s;
-
+    position: relative;
 }
-.nav-link:hover {
-    text-decoration: underline 2px var(--red);
+.nav-link::before {
+    content: "";
+    height: 3px;
+    background-color: #A10000;
+    transition: 1s;
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    transition: 1s;
+}
+.nav-link:hover::before {
+    width: 100%;
 }
 .resume-btn {
     background-color: var(--white);
@@ -161,12 +171,16 @@ body {
     animation-name: mainName;
     animation-duration: 6s;
     animation-iteration-count: infinite; 
+    font-style: italic;
+    cursor: pointer;
 }
-@keyframes mainName {
-    0% {transform: translateY(0);}
-    40% {transform: translateY(2px) rotateZ(1deg);}
-    80% {transform: translateY(-2px) rotateZ(-1deg);}
-    100% {transform: translateY(0px) rotateZ(0deg);}
+.cat-egg {
+    position: absolute;
+    top: 35vh;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 1s;
 }
 .landing-name {
     color: var(--red);
@@ -192,6 +206,7 @@ body {
     width: 100%;
     background-color: black;
     border: 0;
+    box-shadow: 0 0 4px #a1000097;
 }
 
 .landing-scroll-down-div {
@@ -482,6 +497,10 @@ body {
     margin-top: 30px;
 }
 
+.contact-form input, textarea {
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.174);
+}
+
 .contact-form-names  .contact-inputbox {
     width: 150px;
 }
@@ -550,6 +569,7 @@ body {
 
 .contact-form-message {
     resize: vertical;
+    min-height: 50px;
 }
 
 
