@@ -108,7 +108,7 @@ function catEgg() {
     setTimeout(()=>{catEggEl.style.opacity = "0"},1500)
 }
 
-// blob effect 
+//blob effect
 const blob = document.getElementById("blob")
 document.body.onmousemove = event => {
     blob.style.display = 'inline-block'
