@@ -63,7 +63,7 @@ function next() {
     x++
     if (x <= projectNames.length - 1) {
         projectName.textContent = projectNames[x]
-        projectDivContainer.innerHTML = `<iconify-icon icon="eos-icons:bubble-loading" style="color: #a10000;" width="40"></iconify-icon>`
+        
         projectDivContainer.innerHTML = `
         <img class="projects-img" src="${myProjects[projectNames[x]]["src"]}">
         `
@@ -73,7 +73,7 @@ function next() {
     } else {
         x = 0
         projectName.textContent = projectNames[x]
-        projectDivContainer.innerHTML = `<iconify-icon icon="eos-icons:bubble-loading" style="color: #a10000;" width="40"></iconify-icon>`
+        
         projectDivContainer.innerHTML = `
         <img class="projects-img" src="${myProjects[projectNames[x]]["src"]}">
         `
@@ -86,7 +86,7 @@ function previos() {
     x--
     if (x <= projectNames.length - 1 && x >= 0) {
         projectName.textContent = projectNames[x]
-        projectDivContainer.innerHTML = `<iconify-icon icon="eos-icons:bubble-loading" style="color: #a10000;" width="40"></iconify-icon>`
+        
         projectDivContainer.innerHTML = `
         <img class="projects-img" src="${myProjects[projectNames[x]]["src"]}">
         `
@@ -94,7 +94,7 @@ function previos() {
     } else if (x <= -1) {
         x = projectNames.length - 1
         projectName.textContent = projectNames[x]
-        projectDivContainer.innerHTML = `<iconify-icon icon="eos-icons:bubble-loading" style="color: #a10000;" width="40"></iconify-icon>`
+        
         projectDivContainer.innerHTML = `
         <img class="projects-img" src="${myProjects[projectNames[x]]["src"]}">
         `
