@@ -18,6 +18,38 @@ body {
     scroll-behavior: smooth;
 }
 
+/* blob */
+  
+#blob {
+    display: none;
+    background-color: white;
+    height: 20%;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(
+        to right,
+        white,
+        var(--red)
+    );
+    animation: rotate 15s infinite;
+    filter: blur(26px);
+}
+@keyframes rotate {
+    from {
+       rotate: 0deg;
+    }
+    50% {
+        scale: 1.1 1.3;
+    }
+    to {
+        rotate: 360deg;
+    }
+};
+
 /* Scroll bar style */
 
     /* width */
@@ -89,6 +121,7 @@ body {
     cursor: pointer;
     transition: 0.5s;
     z-index: 4;
+    display: inline;
 }
 
 /* Landing page */
@@ -481,6 +514,10 @@ body {
 .about-certificate-img {
     border-radius: 10px;
     width: 100%;
+    transition: 0.4s;
+}
+.about-certificate-img:hover {
+    box-shadow: 0 0 7px 3px var(--red);
 }
 
 /* Contact section */
@@ -552,7 +589,7 @@ body {
     transform: translateY(-7px) translateX(10px);
     font-size: small;
     padding: 0 10px;
-    background-color: var(--background);
+    background-color: #2828285d;
     border-left: 3px double var(--red);
     border-right: 3px double var(--red);
 }
@@ -562,7 +599,7 @@ body {
     transform: translateY(-7px) translateX(10px);
     font-size: small;
     padding: 0 10px;
-    background-color: var(--background);
+    background-color: #2828285d;
     border-left: 3px double var(--red);
     border-right: 3px double var(--red);
 }

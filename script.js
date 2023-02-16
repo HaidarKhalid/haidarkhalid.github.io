@@ -6,6 +6,7 @@ let goUpBtn = document.querySelector(".go-up")
 let nameMiddle = document.querySelector(".landing-describe")
 let nav = document.querySelector(".landing-nav")
 
+let projectDivContainer = document.querySelector(".projuct-contain-div")
 let projectImg = document.querySelector(".projects-img")
 let projectName = document.querySelector(".projects-name")
 let projectHref = document.querySelector(".projects-href")
@@ -62,12 +63,20 @@ function next() {
     x++
     if (x <= projectNames.length - 1) {
         projectName.textContent = projectNames[x]
-        projectImg.src = myProjects[projectNames[x]]["src"]
-        projectHref.href = myProjects[projectNames[x]]["link"]
+        projectDivContainer.innerHTML = `<iconify-icon icon="eos-icons:bubble-loading" style="color: #a10000;" width="40"></iconify-icon>`
+        projectDivContainer.innerHTML = `
+        <img class="projects-img" src="${myProjects[projectNames[x]]["src"]}">
+        `
+        /* 
+        projectImg.src = myProjects[projectNames[x]]["src"]*/
+        projectHref.href = myProjects[projectNames[x]]["link"] 
     } else {
         x = 0
         projectName.textContent = projectNames[x]
-        projectImg.src = myProjects[projectNames[x]]["src"]
+        projectDivContainer.innerHTML = `<iconify-icon icon="eos-icons:bubble-loading" style="color: #a10000;" width="40"></iconify-icon>`
+        projectDivContainer.innerHTML = `
+        <img class="projects-img" src="${myProjects[projectNames[x]]["src"]}">
+        `
         projectHref.href = myProjects[projectNames[x]]["link"]
     }
 }
@@ -77,12 +86,18 @@ function previos() {
     x--
     if (x <= projectNames.length - 1 && x >= 0) {
         projectName.textContent = projectNames[x]
-        projectImg.src = myProjects[projectNames[x]]["src"]
+        projectDivContainer.innerHTML = `<iconify-icon icon="eos-icons:bubble-loading" style="color: #a10000;" width="40"></iconify-icon>`
+        projectDivContainer.innerHTML = `
+        <img class="projects-img" src="${myProjects[projectNames[x]]["src"]}">
+        `
         projectHref.href = myProjects[projectNames[x]]["link"]
     } else if (x <= -1) {
         x = projectNames.length - 1
         projectName.textContent = projectNames[x]
-        projectImg.src = myProjects[projectNames[x]]["src"]
+        projectDivContainer.innerHTML = `<iconify-icon icon="eos-icons:bubble-loading" style="color: #a10000;" width="40"></iconify-icon>`
+        projectDivContainer.innerHTML = `
+        <img class="projects-img" src="${myProjects[projectNames[x]]["src"]}">
+        `
         projectHref.href = myProjects[projectNames[x]]["link"]
     }
 }
@@ -91,4 +106,22 @@ function previos() {
 function catEgg() {
     catEggEl.style.opacity = "1"
     setTimeout(()=>{catEggEl.style.opacity = "0"},1500)
+}
+
+// blob effect 
+const blob = document.getElementById("blob")
+document.body.onmousemove = event => {
+    blob.style.display = 'inline-block'
+    const { clientX, clientY} = event
+    if (clientX >= window.innerWidth - 120) {
+        blob.animate({
+        left: `${window.innerWidth - 120}px`,
+        top: `${clientY +  window.scrollY}px`
+        }, {duration: 500, fill:"forwards"})
+    } else {
+    blob.animate({
+    left: `${clientX}px`,
+    top: `${clientY +  window.scrollY}px`
+    }, {duration: 500, fill:"forwards"})
+    }
 }
