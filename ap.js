@@ -1,6 +1,7 @@
 
 let myProjects = {
     "DuckDuckGo recreate":{src:"images/projects/DuckDuckGo-recreate.png",link:"https://haidarkhalid.github.io/DuckDuckGo-recreate/"},
+    "Cat vs Dogs":{src:"images/projects/cat-vs-dogs.png",link:"https://haidarkhalid.github.io/cat-vs-dogs/"},
     "Blackjack game":{src:"images/projects/BlackJack.png",link:"https://haidarkhalid.github.io/blackjack-game/"},
     "Score counter": {src:"images/projects/score-counter.png",link:"https://haidarkhalid.github.io/score-counter-new/"},
     "Charecters counter": {src:"images/projects/charecter-couner.png",link:"https://haidarkhalid.github.io/charecters-counter/"},
@@ -12,7 +13,7 @@ let myProjects = {
     "Digital clock": {src:"images/projects/digital-clock.png",link:"https://haidarkhalid.github.io/Digital-clock/"},
     "Colors game": {src:"images/projects/colors-game.png",link:"https://haidarkhalid.github.io/colors-game/"},
 }
-let projectNames = ["DuckDuckGo recreate","Blackjack game","Score counter","Charecters counter","Multiplication quiz","Calculator","Gaming quiz","Password generator","To-Do list","Digital clock","Colors game"]
+let projectNames = ["DuckDuckGo recreate","Cat vs Dogs","Blackjack game","Score counter","Charecters counter","Multiplication quiz","Calculator","Gaming quiz","Password generator","To-Do list","Digital clock","Colors game"]
 let apProjectsEl = document.querySelector(".ap-projects")
 
 for (let i in projectNames) {
