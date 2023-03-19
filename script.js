@@ -46,6 +46,7 @@ window.onscroll = function (e) {
 // projects image slider
 let myProjects = {
     "DuckDuckGo recreate":{src:"images/projects/DuckDuckGo-recreate.png",link:"https://haidarkhalid.github.io/DuckDuckGo-recreate/"},
+    "Cat vs Dogs":{src:"images/projects/cat-vs-dogs.png",link:"https://haidarkhalid.github.io/cat-vs-dogs/"},
     "Blackjack game":{src:"images/projects/BlackJack.png",link:"https://haidarkhalid.github.io/blackjack-game/"},
     "Score counter": {src:"images/projects/score-counter.png",link:"https://haidarkhalid.github.io/score-counter-new/"},
     "Charecters counter": {src:"images/projects/charecter-couner.png",link:"https://haidarkhalid.github.io/charecters-counter/"},
