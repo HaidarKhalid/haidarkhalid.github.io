@@ -45,8 +45,8 @@ window.onscroll = function (e) {
 
 // projects image slider
 let myProjects = {
-    "WeatherHere app" : {src:"images/projects/weatherhere-app.png",link:"https://haidarkhalid.github.io/WeatherHere/"},
     "DuckDuckGo recreate":{src:"images/projects/DuckDuckGo-recreate.png",link:"https://haidarkhalid.github.io/DuckDuckGo-recreate/"},
+    "WeatherHere app" : {src:"images/projects/weatherhere-app.png",link:"https://haidarkhalid.github.io/WeatherHere/"},
     "Cat vs Dogs":{src:"images/projects/cat-vs-dogs.png",link:"https://haidarkhalid.github.io/cat-vs-dogs/"},
     "Blackjack game":{src:"images/projects/BlackJack.png",link:"https://haidarkhalid.github.io/blackjack-game/"},
     "Score counter": {src:"images/projects/score-counter.png",link:"https://haidarkhalid.github.io/score-counter-new/"},
@@ -59,7 +59,7 @@ let myProjects = {
     "Digital clock": {src:"images/projects/digital-clock.png",link:"https://haidarkhalid.github.io/Digital-clock/"},
     "Colors game": {src:"images/projects/colors-game.png",link:"https://haidarkhalid.github.io/colors-game/"},
 }
-let projectNames = ["WeatherHere app", "DuckDuckGo recreate","Cat vs Dogs","Blackjack game","Score counter","Charecters counter","Multiplication quiz","Calculator","Gaming quiz","Password generator","To-Do list","Digital clock","Colors game"]
+let projectNames = ["DuckDuckGo recreate", "WeatherHere app","Cat vs Dogs","Blackjack game","Score counter","Charecters counter","Multiplication quiz","Calculator","Gaming quiz","Password generator","To-Do list","Digital clock","Colors game"]
 let x = 0
 function next() {
     x++
