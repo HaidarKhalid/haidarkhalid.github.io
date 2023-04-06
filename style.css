@@ -238,7 +238,7 @@ body {
     height: 2px;
     width: 100%;
     background-color: black;
-    border: 0;
+    border: none;
     box-shadow: 0 0 4px #a1000097;
 }
 
