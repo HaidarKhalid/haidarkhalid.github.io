@@ -1,5 +1,6 @@
 {
     "myProjects": {
+        "\"Find My Breed\" game":{"src":"images/projects/findmybreed.png","link":"https://haidarkhalid.github.io/findmybreed/"},
         "DuckDuckGo recreate":{"src":"images/projects/DuckDuckGo-recreate.png","link":"https://haidarkhalid.github.io/DuckDuckGo-recreate/"},
         "WeatherHere app" : {"src":"images/projects/weatherhere-app.png","link":"https://haidarkhalid.github.io/WeatherHere/"},
         "Cat vs Dogs":{"src":"images/projects/cat-vs-dogs.png","link":"https://haidarkhalid.github.io/cat-vs-dogs/"},
@@ -14,5 +15,5 @@
         "Digital clock": {"src":"images/projects/digital-clock.png","link":"https://haidarkhalid.github.io/Digital-clock/"},
         "Colors game": {"src":"images/projects/colors-game.png","link":"https://haidarkhalid.github.io/colors-game/"}
     }, 
-    "projectNames" : ["DuckDuckGo recreate","WeatherHere app", "Cat vs Dogs","Blackjack game","Score counter","Charecters counter","Multiplication quiz","Calculator","Gaming quiz","Password generator","To-Do list","Digital clock","Colors game"]
+    "projectNames" : ["\"Find My Breed\" game","DuckDuckGo recreate","WeatherHere app", "Cat vs Dogs","Blackjack game","Score counter","Charecters counter","Multiplication quiz","Calculator","Gaming quiz","Password generator","To-Do list","Digital clock","Colors game"]
 }
