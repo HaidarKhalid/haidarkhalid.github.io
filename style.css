@@ -1,6 +1,6 @@
 :root {
     --background: #282828;
-    --red: #a10000;
+    --red: #c21010;
     --white: rgb(255, 255, 255);
 }
 
@@ -312,38 +312,33 @@ body {
 
 .projects-buttons {
     display: flex;
-    justify-content: space-evenly;
-    margin: 20px 0px 0 0px;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin: 40px 0px 0 0px;
 }
 
 .projects-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
-    border: 0.11rem solid black;
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
     border-radius: 4px;
     transition: 0.25s;
     text-shadow: 0px 0px 7px black;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 10px;
 }
-.projects-btn-next, .projects-btn-previos {
-    background-color: var(--red);
+.projects-btn-icon {
+    color: #c20000;
+    transition: 0.15s;
 }
-.projects-btn-all {
-    color: var(--red);
-    background-color: var(--white);
-}
-.projects-btn-all:hover {
-    background-color: var(--red);
-    color: var(--white);
-}
-
-.projects-btn-next:hover, .projects-btn-previos:hover {
-    background-color: var(--white);
-    color: var(--red);
+.projects-btn-icon:hover {
+    color: white;
 }
 
 /* Project image border effect */ 
@@ -351,7 +346,7 @@ body {
 .projects-project-div {
     position: relative;
     width: 80vw;
-    margin: auto;
+    margin: 20px auto;
     padding: 5px 5px 0 5px;
     transition: 0.5s;
     overflow: hidden;
@@ -611,16 +606,31 @@ body {
     background-color: var(--red);
     color: var(--white);
     font-size: large;
-    border: 1px solid black;
-    padding: 5px 10px;
-    border-radius: 3px;
-    margin-top: 20px;
-    transition: 0.15s;
+    font-weight: bold;
+    box-shadow: 0 0 10px 2px white;
+    border: 0;
+    padding: 10px;
+    border-radius: 7px;
+    transition: 0.55s;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
 }
 .contact-form-submit:hover {
     background-color: var(--white);
     color: var(--red);
+    box-shadow: 0 0 10px 2px var(--red);
 }
+.contact-form-submit-icon {
+    color: var(--white);
+    transition: 0.55s;
+}
+.contact-form-submit:hover > .contact-form-submit-icon {
+    color: var(--red);
+}
+
 .contact-social-icons {
     position: absolute;
     bottom: 0;
